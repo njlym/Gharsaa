@@ -28,6 +28,7 @@ st.markdown("""
 
 import os 
 dir_path = os.path.dirname(os.path.realpath(__file__))
+st.write(dir_path)
 print("dir_path:", dir_path)
 logo_path = os.path.join(script_dir,"static",  "Logo.png")
 with open(logo_path, "rb") as f:
