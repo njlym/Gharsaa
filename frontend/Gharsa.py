@@ -27,7 +27,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-logo_path = os.path.join(script_dir,"static", "images", "Logo.png")
+logo_path = os.path.join(script_dir,"static",  "Logo.png")
 with open(logo_path, "rb") as f:
     logo_base64 = base64.b64encode(f.read()).decode()
 st.markdown(f"""
@@ -36,7 +36,7 @@ st.markdown(f"""
     </div>
 """, unsafe_allow_html=True)
 
-welcome_icon_path = os.path.join(script_dir,"static", "images", "welcome_icon.png")
+welcome_icon_path = os.path.join(script_dir,"static",  "welcome_icon.png")
 with open(welcome_icon_path, "rb") as f:
     welcome_icon_base64 = base64.b64encode(f.read()).decode()
 
@@ -87,10 +87,10 @@ icons = {
 }
 icon_base64 = {}
 for key, file in icons.items():
-    with open(os.path.join(script_dir,"static","images", file), "rb") as f:
+    with open(os.path.join(script_dir,"static", file), "rb") as f:
         icon_base64[key] = base64.b64encode(f.read()).decode()
         
-bg_path = os.path.join(script_dir,"static", "images", "background.png")
+bg_path = os.path.join(script_dir,"static",  "background.png")
 with open(bg_path, "rb") as f:
     bg_base64 = base64.b64encode(f.read()).decode()
 
