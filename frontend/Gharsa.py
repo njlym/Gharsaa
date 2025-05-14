@@ -27,7 +27,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-logo_path = os.path.join(script_dir,"static",  "Logo.png")
+logo_path = ".\static\Logo.png"
+# os.path.join(script_dir,"static",  "Logo.png")
 with open(logo_path, "rb") as f:
     logo_base64 = base64.b64encode(f.read()).decode()
 st.markdown(f"""
@@ -36,7 +37,8 @@ st.markdown(f"""
     </div>
 """, unsafe_allow_html=True)
 
-welcome_icon_path = os.path.join(script_dir,"static",  "welcome_icon.png")
+welcome_icon_path = ".\static\welcome_icon.png"
+# os.path.join(script_dir,"static",  "welcome_icon.png")
 with open(welcome_icon_path, "rb") as f:
     welcome_icon_base64 = base64.b64encode(f.read()).decode()
 
