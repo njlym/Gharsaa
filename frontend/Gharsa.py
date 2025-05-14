@@ -28,7 +28,7 @@ st.markdown("""
 
 import os 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-st.write(dir_path)
+st.write(dir_path, unsafe_allow_html=True)
 print("dir_path:", dir_path)
 logo_path = os.path.join(script_dir,"static",  "Logo.png")
 with open(logo_path, "rb") as f:
@@ -93,14 +93,14 @@ for key, file in icons.items():
     with open(os.path.join(script_dir,"static", file), "rb") as f:
         icon_base64[key] = base64.b64encode(f.read()).decode()
         
-# bg_path = os.path.join(script_dir,"static",  "background.png")
-# with open(bg_path, "rb") as f:
-#     bg_base64 = base64.b64encode(f.read()).decode()
+bg_path = os.path.join(script_dir,"static",  "Background.png")
+with open(bg_path, "rb") as f:
+    bg_base64 = base64.b64encode(f.read()).decode()
 
 st.markdown(f"""
     <style>
     .stApp {{
-        background-image: url("app/static/background.png");
+        background-image: url("data:image/png;base64,{bg_base64}");
         background-size: cover;
         background-attachment: fixed;
         font-family: 'Cairo', sans-serif;
