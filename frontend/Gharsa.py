@@ -118,7 +118,9 @@ with c2:
 with c3:  
     if st.button("ماهي نبتتي؟", key="identify_plant"):
         st.query_params(page="what_is_the_plant")
-
+        
+# Get current page from query params
+page = st.query_params.get("page", ["الرئيسية"])[0]
 
 icons = {
     "detect": "detect_plant.png",
