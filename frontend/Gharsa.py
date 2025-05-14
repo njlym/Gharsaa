@@ -100,7 +100,7 @@ with open(bg_path, "rb") as f:
 st.markdown(f"""
     <style>
     .stApp {{
-        background-image: url("data:image/png;base64,{bg_base64}");
+        background-image: url("app/static/background.png");
         background-size: cover;
         background-attachment: fixed;
         font-family: 'Cairo', sans-serif;
