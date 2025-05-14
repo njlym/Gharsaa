@@ -40,15 +40,36 @@ welcome_icon_path = os.path.join(script_dir,"images",  "welcome_icon.png")
 with open(welcome_icon_path, "rb") as f:
     welcome_icon_base64 = base64.b64encode(f.read()).decode()
 
+
+
 st.markdown("""
     <style>
     button[kind="primary"] {
-    background-color: orange;
+        all: unset;
+        text-decoration: none;
+        color: #333;
+        padding: 8px 15px;
+        border-radius: 6px;
+        font-family: 'Marhey', sans-serif;
       }
-
-    button[kind="seondary"] {
-    background-color: purple;
+      button[kind="primary"] {
+        all: unset;
+        background-color: rgba(139,94,60,0.1);
+        color: #8b5e3c;
+        font-family: 'Marhey', sans-serif;
       }
+    .st-key-nav {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        background-color: rgba(255,255,255,0.8);
+        padding: 15px;
+        font-family: 'Marhey', sans-serif;
+        font-size: 22px;
+        direction: rtl;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
     .navbar {
         display: flex;
         justify-content: center;
@@ -77,7 +98,7 @@ st.markdown("""
     }
     </style>
     <div class="navbar">
-        <a href="/Gharsa" onclick="window.location.href='/Gharsa'" target="_self" class="active-nav">الرئيسية</a>
+        <a href="/Gharsa" onclick="alert(window.location.href)" target="_self" class="active-nav">الرئيسية</a>
         <a href="/Plants_info" onclick="window.location.href='/Plants_info'" target="_self">تعرف على النباتات</a>
         <a href="/what_is_the_plant" onclick="window.location.href='/what_is_the_plant'" target="_self">ماهي نبتتي؟</a>
         <a href="/Plant_your_plant" onclick="window.location.href='/Plant_your_plant'" target="_self">ازرع نبتتك</a>
@@ -86,8 +107,15 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)        
 
-st.button("Primary button", type="primary")
-st.button("Primary button", type="secondary")
+con =st.container(key="nav")
+c1, c2, c3 = con.columns(3, gap="large")
+with c1:
+    st.button("افحص نبتتك", type="primary", key="check_plant")
+with c2:
+    st.button("ازرع نبتتك", type="primary", key="plant_plant")
+with c3:  
+    st.button("ماهي نبتتي؟", type="primary", key="identify_plant")
+
 
 icons = {
     "detect": "detect_plant.png",
