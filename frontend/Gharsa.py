@@ -108,22 +108,25 @@ st.markdown("""
 """, unsafe_allow_html=True)        
 
 
+# Get current query parameters
+query_params = st.experimental_get_query_params()
+
 # Navigation buttons
 con = st.container(key="nav")
 c1, c2, c3 = con.columns(3, gap="large")
 with c1:
     if st.button("افحص نبتتك", key="check_plant"):
-        st.query_params(page="Check_your_plant")
+        st.experimental_set_query_params(page="Check_your_plant")
 with c2:
     if st.button("ازرع نبتتك", key="plant_plant"):
-        st.query_params(page="Plant_your_plant")
+        st.experimental_set_query_params(page="Plant_your_plant")
 with c3:  
     if st.button("ماهي نبتتي؟", key="identify_plant"):
-        st.query_params(page="what_is_the_plant")
+        st.experimental_set_query_params(page="what_is_the_plant")
 
-# Get current page from query params
-page = st.query_params.get("page", ["الرئيسية"])[0]
-
+# Check if 'page' parameter exists
+if 'page' not in query_params:
+    st.experimental_set_query_params(page="الرئيسية")
 
 icons = {
     "detect": "detect_plant.png",
