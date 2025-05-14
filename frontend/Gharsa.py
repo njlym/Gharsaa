@@ -99,7 +99,7 @@ st.markdown("""
     </style>
     <div class="navbar">
         <a href="/Gharsa" onclick="window.location.href='/Gharsa'" target="_self" class="active-nav">الرئيسية</a>
-        <a href="/Plants_info" onclick="window.location.href='/Plants_info'">تعرف على النباتات</a>
+        <a href="/Plants_info" onclick="window.location.href='/Plants_info'" target="_self">تعرف على النباتات</a>
         <a href="/what_is_the_plant" onclick="window.location.href='/what_is_the_plant'" target="_self">ماهي نبتتي؟</a>
         <a href="/Plant_your_plant" onclick="window.location.href='/Plant_your_plant'" target="_self">ازرع نبتتك</a>
         <a href= "/Check_your_plant"onclick="window.location.href='/Check_your_plant'" target="_self">افحص نبتتك</a>
@@ -107,26 +107,15 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)        
 
-
-# Get current query parameters
-query_params = st.experimental_get_query_params()
-
-# Navigation buttons
-con = st.container(key="nav")
+con =st.container(key="nav")
 c1, c2, c3 = con.columns(3, gap="large")
 with c1:
-    if st.button("افحص نبتتك", key="check_plant"):
-        st.experimental_set_query_params(page="Check_your_plant")
+    st.button("افحص نبتتك", type="primary", key="Check_your_plant")
 with c2:
-    if st.button("ازرع نبتتك", key="plant_plant"):
-        st.experimental_set_query_params(page="Plant_your_plant")
+    st.button("ازرع نبتتك", type="primary", key="Plant_your_plant")
 with c3:  
-    if st.button("ماهي نبتتي؟", key="identify_plant"):
-        st.experimental_set_query_params(page="what_is_the_plant")
+    st.button("ماهي نبتتي؟", type="primary", key="what_is_the_plant")
 
-# Check if 'page' parameter exists
-if 'page' not in query_params:
-    st.experimental_set_query_params(page="الرئيسية")
 
 icons = {
     "detect": "detect_plant.png",
