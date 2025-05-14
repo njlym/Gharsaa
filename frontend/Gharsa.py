@@ -122,7 +122,9 @@ with c3:
         st.experimental_set_query_params(page="what_is_the_plant")
 
 # Get current page from query params
-page = st.query_params.get("page", ["الرئيسية"])[0]
+page = st.experimental_get_query_params().get("page", ["الرئيسية"])[0]
+
+
 icons = {
     "detect": "detect_plant.png",
     "plant": "plant_guide.png",
