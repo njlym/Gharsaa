@@ -42,6 +42,13 @@ with open(welcome_icon_path, "rb") as f:
 
 st.markdown("""
     <style>
+    button[kind="primary"] {
+    background-color: orange;
+      }
+
+    button[kind="seondary"] {
+    background-color: purple;
+      }
     .navbar {
         display: flex;
         justify-content: center;
@@ -79,6 +86,8 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)        
 
+st.button("Primary button", type="primary")
+st.button("Primary button", type="secondary")
 
 icons = {
     "detect": "detect_plant.png",
