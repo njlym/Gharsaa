@@ -110,11 +110,14 @@ st.markdown("""
 con =st.container(key="nav")
 c1, c2, c3 = con.columns(3, gap="large")
 with c1:
-    st.button("افحص نبتتك", type="primary", key="check_plant")
+    if st.button("افحص نبتتك", key="check_plant"):
+        st.query_params(page="Check_your_plant")
 with c2:
-    st.button("ازرع نبتتك", type="primary", key="plant_plant")
+    if st.button("ازرع نبتتك", key="plant_plant"):
+        st.query_params(page="Plant_your_plant")
 with c3:  
-    st.button("ماهي نبتتي؟", type="primary", key="identify_plant")
+    if st.button("ماهي نبتتي؟", key="identify_plant"):
+        st.query_params(page="what_is_the_plant")
 
 
 icons = {
