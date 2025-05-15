@@ -132,45 +132,10 @@ with col3:
 
 
 
-if "page" not in st.session_state:
-    st.session_state.page = "home"
 
-# التنقل حسب الحالة
-if st.session_state.page == "home":
-    st.markdown("""
-    <style>
-    .feature-card {
-        border: 1px solid #ccc;
-        padding: 20px;
-        border-radius: 10px;
-        cursor: pointer;
-        margin-bottom: 20px;
-    }
-    </style>
-    """, unsafe_allow_html=True)
 
-    # كروت قابلة للنقر
-    col1, col2 = st.columns(2)
 
-    with col1:
-        if st.button("🌿 افحص نبتتك"):
-            st.session_state.page = "check"
-
-    with col2:
-        if st.button("🌱 ازرع نبتتك"):
-            st.session_state.page = "plant"
-
-elif st.session_state.page == "check":
-    st.write("صفحة فحص النبتة")
-    if st.button("🔙 رجوع"):
-        st.session_state.page = "home"
-
-elif st.session_state.page == "plant":
-    st.write("صفحة ازرع نبتتك")
-    if st.button("🔙 رجوع"):
-        st.session_state.page = "home"
-
-        
+    
 icons = {
     "detect": "detect_plant.png",
     "plant": "plant_guide.png",
