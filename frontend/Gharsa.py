@@ -116,18 +116,18 @@ st.markdown("""
 # with c3:  
 #     st.button("ماهي نبتتي؟", type="primary", key="what_is_plant")
 
-# col1, col2 ,col3 = st.columns(3)
+col1, col2 ,col3 = st.columns(3)
 
-# with col1:
-#     if st.button("🔍 افحص نبتتك"):
-#         st.switch_page("Check_your_plant.py")  # متاحة من Streamlit 1.25+
+with col1:
+    if st.button("🔍 افحص نبتتك"):
+        st.switch_page("pages/Check_your_plant.py")  # متاحة من Streamlit 1.25+
 
-# with col2:
-#     if st.button("🌱 ازرع نبتتك"):
-#         st.switch_page("Plant_your_plant.py")
-# with col3:
-#     if st.button("اذهب إلى صفحة معلومات النباتات"):
-#         st.switch_page("تعرف على النباتات")  # متاحة من Streamlit 1.25+
+with col2:
+    if st.button("🌱 ازرع نبتتك"):
+        st.switch_page("pages/Plant_your_plant.py")
+with col3:
+    if st.button("اذهب إلى صفحة معلومات النباتات"):
+        st.switch_page("تعرف على النباتات")  # متاحة من Streamlit 1.25+
 
 
 
@@ -170,7 +170,7 @@ elif st.session_state.page == "plant":
     if st.button("🔙 رجوع"):
         st.session_state.page = "home"
 
-
+        
 icons = {
     "detect": "detect_plant.png",
     "plant": "plant_guide.png",
