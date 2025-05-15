@@ -126,8 +126,8 @@ with col2:
     if st.button("🌱 ازرع نبتتك"):
         st.switch_page("Plant_your_plant.py")
 with col3:
-    if st.button("🌼 تعرف على النباتات"):
-        st.switch_page("Plants_info.py")  
+    if st.button("اذهب إلى صفحة معلومات النباتات"):
+        st.switch_page("معلومات النباتات")
 
 icons = {
     "detect": "detect_plant.png",
