@@ -116,20 +116,20 @@ st.markdown("""
 # with c3:  
 #     st.button("ماهي نبتتي؟", type="primary", key="what_is_plant")
 
-col1, col2 ,col3 = st.columns(3)
-from streamlit_extras.switch_page_button import switch_page
+# col1, col2 ,col3 = st.columns(3)
+# from streamlit_extras.switch_page_button import switch_page
 
-with col1:
-    if st.button("🔍 افحص نبتتك"):
-        st.switch_page("pages/Check_your_plant.py")  # متاحة من Streamlit 1.25+
+# with col1:
+#     if st.button("🔍 افحص نبتتك"):
+#         st.switch_page("pages/Check_your_plant.py")  # متاحة من Streamlit 1.25+
 
-with col2:
-    if st.button("🌱 ازرع نبتتك"):
-        st.switch_page("Gharsaa/frontend/pages/Plant_your_plant.py")
-with col3:
-#  Create buttons for navigation
-  if st.button("تعرف على النباتات"):
-    switch_page("pages/Plants_info.py")
+# with col2:
+#     if st.button("🌱 ازرع نبتتك"):
+#         st.switch_page("Gharsaa/frontend/pages/Plant_your_plant.py")
+# with col3:
+# #  Create buttons for navigation
+#   if st.button("تعرف على النباتات"):
+#     switch_page("pages/Plants_info.py")
 
 
 
