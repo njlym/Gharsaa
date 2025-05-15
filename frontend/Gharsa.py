@@ -144,6 +144,16 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
+import streamlit as st
+from streamlit_extras.switch_page_button import switch_page
+
+# First page
+if st.button('Go to New Page'):
+    switch_page("what_is_the_plant")
+
+# Add any content for the first page
+st.title('First Page')
+st.write("This is the first page. Click the button to go to the new page.")
 
 video_path = os.path.join(script_dir, "videos", "pre_final_video.mp4")
 if os.path.exists(video_path):
