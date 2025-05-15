@@ -4,13 +4,13 @@ import os
 
 st.set_page_config(page_title="اعضاء غرسة", layout="wide")
 
-# Hide Streamlit elements
-st.markdown("""
-    <style>
-    #MainMenu, footer, header {visibility: hidden;}
-    section[data-testid="stSidebar"], div[data-testid="collapsedControl"] {display: none !important;}
-    </style>
-""", unsafe_allow_html=True)
+# # Hide Streamlit elements
+# st.markdown("""
+#     <style>
+#     #MainMenu, footer, header {visibility: hidden;}
+#     section[data-testid="stSidebar"], div[data-testid="collapsedControl"] {display: none !important;}
+#     </style>
+# """, unsafe_allow_html=True)
 
 # Load Logo
 script_dir = os.path.dirname(os.path.abspath(__file__))
