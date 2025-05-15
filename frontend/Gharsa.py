@@ -124,7 +124,7 @@ with col1:
 
 with col2:
     if st.button("🌱 ازرع نبتتك"):
-        st.switch_page("pages/Plant_your_plant.py")
+        st.switch_page("Gharsaa/frontend/pages/Plant_your_plant.py")
 with col3:
     if st.button("اذهب إلى صفحة معلومات النباتات"):
         st.switch_page("تعرف على النباتات")  # متاحة من Streamlit 1.25+
