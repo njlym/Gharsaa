@@ -98,12 +98,12 @@ st.markdown("""
     }
     </style>
     <div class="navbar">
-        <a href="/Gharsa" onclick="window.location.href='/Gharsa'" target="_self" class="active-nav">الرئيسية</a>
-        <a href="/Plants_info" onclick="window.location.href='/Plants_info'" target="_self">تعرف على النباتات</a>
-        <a href="/what_is_the_plant" onclick="window.location.href='/what_is_the_plant'" target="_self">ماهي نبتتي؟</a>
-        <a href="/Plant_your_plant" onclick="window.location.href='/Plant_your_plant'" target="_self">ازرع نبتتك</a>
-        <a href= "/Check_your_plant"onclick="window.location.href='/Check_your_plant'" target="_self">افحص نبتتك</a>
-        <a href="/Team_members" onclick="window.location.href='/Team_members'" target="_self">الأعضاء</a>
+        <a href="./Gharsa" onclick="window.location.href='/Gharsa'" target="_self" class="active-nav">الرئيسية</a>
+        <a href="./Plants_info" onclick="window.location.href='/Plants_info'" target="_self">تعرف على النباتات</a>
+        <a href="./what_is_the_plant" onclick="window.location.href='/what_is_the_plant'" target="_self">ماهي نبتتي؟</a>
+        <a href="./Plant_your_plant" onclick="window.location.href='/Plant_your_plant'" target="_self">ازرع نبتتك</a>
+        <a href= "./Check_your_plant"onclick="window.location.href='/Check_your_plant'" target="_self">افحص نبتتك</a>
+        <a href="./Team_members" onclick="window.location.href='/Team_members'" target="_self">الأعضاء</a>
     </div>
 """, unsafe_allow_html=True)        
 
@@ -117,6 +117,7 @@ st.markdown("""
 #     st.button("ماهي نبتتي؟", type="primary", key="what_is_plant")
 
 col1, col2 ,col3 = st.columns(3)
+from streamlit_extras.switch_page_button import switch_page
 
 with col1:
     if st.button("🔍 افحص نبتتك"):
@@ -126,8 +127,9 @@ with col2:
     if st.button("🌱 ازرع نبتتك"):
         st.switch_page("Gharsaa/frontend/pages/Plant_your_plant.py")
 with col3:
-    if st.button("اذهب إلى صفحة معلومات النباتات"):
-        st.switch_page("تعرف على النباتات")  # متاحة من Streamlit 1.25+
+#  Create buttons for navigation
+  if st.button("تعرف على النباتات"):
+    switch_page("pages/Plants_info.py")
 
 
 
