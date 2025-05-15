@@ -127,7 +127,7 @@ with col2:
         st.switch_page("Plant_your_plant.py")
 with col3:
     if st.button("اذهب إلى صفحة معلومات النباتات"):
-        st.switch_page("معلومات النباتات")
+        st.switch_page("تعرف على النباتات")  # متاحة من Streamlit 1.25+
 
 icons = {
     "detect": "detect_plant.png",
