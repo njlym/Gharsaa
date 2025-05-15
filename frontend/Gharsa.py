@@ -9,12 +9,12 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 st.set_page_config(page_title="غرسة", layout="wide", initial_sidebar_state="collapsed")
 
 
-st.markdown("""
-    <style>
-    #MainMenu, footer, header {visibility: hidden;}
-    section[data-testid="stSidebar"], div[data-testid="collapsedControl"] {display: none !important;}
-    </style>
-""", unsafe_allow_html=True)
+# st.markdown("""
+#     <style>
+#     #MainMenu, footer, header {visibility: hidden;}
+#     section[data-testid="stSidebar"], div[data-testid="collapsedControl"] {display: none !important;}
+#     </style>
+# """, unsafe_allow_html=True)
 
 
 st.markdown("""
