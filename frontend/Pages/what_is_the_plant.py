@@ -8,22 +8,22 @@ st.set_page_config(page_title="ماهي نبتتي؟", layout="wide")
 
 
 
-# hide_streamlit_style = """
-#     <style>
-#     #MainMenu {visibility: hidden;}
-#     footer {visibility: hidden;}
-#     header {visibility: hidden;}
-#     </style>
-#     """
-# st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+    """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# hide_sidebar_style = """
-#     <style>
-#     section[data-testid="stSidebar"] {display: none !important;}
-#     div[data-testid="collapsedControl"] {display: none !important;}
-#     </style>
-# """
-# st.markdown(hide_sidebar_style, unsafe_allow_html=True)
+hide_sidebar_style = """
+    <style>
+    section[data-testid="stSidebar"] {display: none !important;}
+    div[data-testid="collapsedControl"] {display: none !important;}
+    </style>
+"""
+st.markdown(hide_sidebar_style, unsafe_allow_html=True)
 
 st.markdown("""
     <style>
