@@ -116,7 +116,7 @@ st.markdown("""
 # with c3:  
 #     st.button("ماهي نبتتي؟", type="primary", key="what_is_plant")
 
-col1, col2 ,col3 , col4 = st.columns(4)
+col1, col2 ,col3 = st.columns(3)
 
 with col1:
     if st.button("🔍 افحص نبتتك"):
@@ -126,11 +126,8 @@ with col2:
     if st.button("🌱 ازرع نبتتك"):
         st.switch_page("Plant_your_plant.py")
 with col3:
-    if st.button("🌿 ماهي نبتتي؟"):
-        st.switch_page("what_is_the_plant.py")  
-with col4:
     if st.button("🌼 تعرف على النباتات"):
-        st.switch_page("Plants_info.py")
+        st.switch_page("Plants_info.py")  
 
 icons = {
     "detect": "detect_plant.png",
