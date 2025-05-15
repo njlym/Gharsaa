@@ -12,7 +12,7 @@ import os
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 
-st.set_page_config(page_title="افحص نبتتك", layout="wide" ,  initial_sidebar_state="collapsed")
+st.set_page_config(page_title="افحص نبتتك", layout="wide" , )
 
 # hide_streamlit_style = """
 #     <style>
