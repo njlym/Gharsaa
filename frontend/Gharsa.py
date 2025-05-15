@@ -107,15 +107,27 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)        
 
-con =st.container(key="nav")
-c1, c2, c3 = con.columns(3, gap="large")
-with c1:
-    st.button("افحص نبتتك", type="primary", key="Check_your_plant")
-with c2:
-    st.button("ازرع نبتتك", type="primary", key="Plant_your_plant")
-with c3:  
-    st.button("ماهي نبتتي؟", type="primary", key="what_is_plant")
+# con =st.container(key="nav")
+# c1, c2, c3 = con.columns(3, gap="large")
+# with c1:
+#     st.button("افحص نبتتك", type="primary", key="Check_your_plant")
+# with c2:
+#     st.button("ازرع نبتتك", type="primary", key="Plant_your_plant")
+# with c3:  
+#     st.button("ماهي نبتتي؟", type="primary", key="what_is_plant")
 
+col1, col2 ,col3 = st.columns(3)
+
+with col1:
+    if st.button("🔍 افحص نبتتك"):
+        st.switch_page("Check_your_plant.py")  # متاحة من Streamlit 1.25+
+
+with col2:
+    if st.button("🌱 ازرع نبتتك"):
+        st.switch_page("Plant_your_plant.py")
+with col3:
+    if st.button("🌿 ماهي نبتتي؟"):
+        st.switch_page("what_is_the_plant.py")  
 
 icons = {
     "detect": "detect_plant.png",
